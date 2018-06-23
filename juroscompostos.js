@@ -1,10 +1,10 @@
 window.onload = init;
 
-var buton
+var button
 
 function init() {
-	buton=document.getElementById("botao");
-	buton.addEventListener('click', calcular)
+	button=document.getElementById("botao");
+	button.addEventListener('click', calcular)
 }
 
 function calcular() {
@@ -14,13 +14,13 @@ function calcular() {
 	var JA = document.getElementById("jurosaplicado").value; //Juros Aplicados
 	var i // Índice
 	var M // Resultado final
-	JA = JA / 100;
+	JA = JA / 100; // Passando para porcentagem
 	//JA = JA + 1;
 	//JA = Math.pow(JA, T);
 	//C = C * JA;
 
 
-	for(i=1;i<=T;i++){
+	for(i=1;i<=T;i++){ // "for" Para calcular os juros determinado pela quantidade de meses
 		console.log(12)
 		M= CI*(1+JA);
 		document.getElementById("R").innerHTML += i  + "--" + CI + "--" + M + '<br>';
